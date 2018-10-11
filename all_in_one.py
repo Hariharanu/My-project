@@ -1,3 +1,5 @@
+import math as w
+from gtts import gTTS
 def factorial(n):
     m=1
     for i in range(1,n+1):
@@ -113,21 +115,7 @@ def Perfectnumber(n):
     else:
         print("no")
 def strongnumber(Number):
-    s= 0
-    t = Number
-    while(t > 0):
-        Factorial = 1
-        i = 1
-        Reminder = t % 10
-        while(i <= Reminder):
-            Factorial = Factorial * i
-            i = i + 1
-        s = s + Factorial
-        t = t // 10
-    if (s == Number):
-        print("yes")
-    else:
-        print("no")
+    =
 def celsiustofahrenheit(n):
     f = (n * 1.8) + 32
     print(f)
@@ -176,4 +164,17 @@ def romantointeger( s):
             else:
                 intvalue += romvalue[s[i]]
         print(intvalue)
-       
+def areaofcircle(n):
+	print(3.141**n)
+def circumferenceofcircle(n):
+	print(2*3.141*n)
+def areaoftriangle(a,b,c):
+	s=(a+b+c)/2
+	n=w.sqrt((s*(s-a)*(s-b)*(s-c)))
+	print(round(n,2))
+def  perimeterofarectangle(l,w):
+	p=2*(l+w)
+	print(p)
+def texttovoice(n):
+	tts = gTTS(n)
+	tts.save('hello.mp3')
